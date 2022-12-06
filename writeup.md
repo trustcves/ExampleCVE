@@ -8,11 +8,11 @@ tags:
   - untagged
 ---
 # CVE-2022-37783: Disclosure of password hashes
-<b>Affected Product:</b> Craft CMS </br>
-<b>Affected Versions:</b> 3.0.0 – 3.7.32 <br>
-<b>Fixed Version:</b> >=3.7.33<br>
-<b>CVE-Number:</b> CVE-2022-37783<br>
-<b>Severity:</b> High<br>
+**Affected Product:** Craft CMS  
+**Affected Versions:** 3.0.0 – 3.7.32  
+**Fixed Version:** >=3.7.33  
+**CVE-Number:** CVE-2022-37783  
+**Severity:** High  
 
 *Discovered by Ing. Simon Schönegger, BSc (Office Graz), Harald Schmal, BSc (Office Vienna)*
 
@@ -21,9 +21,9 @@ During a penetration test for a customer, researchers of TÜV Trust IT Austria w
 ## Anatomy of the vulnerability
 Craft CMS disclosed the password hashes of all users who log into the system using E-Mail or username. Users utilizing SAML-Login are not affected by this vulnerability. The Craft-CSRF Cookie contained the password hash URL-Encoded.
 
-![](images/console.png)
-![](images/decoded.png)
-![](images/realHash.png)
+![](../images/console.png)
+![](../images/decoded.png)
+![](../images/realHash.png)
 
 The password is hashed using bcrypt which is a slow hash to crack. The disclosure of the password hash is caused by bad coding practices by mixing the users hashed password into the CSRF-Token.
 
