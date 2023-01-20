@@ -5,16 +5,19 @@ draft: false
 toc: false
 images:
 tags:
-  - untagged
+  - informationdisclosure
+  - craftcms
+  - password
+  - hashing
 ---
 # CVE-2022-37783: Disclosure of password hashes
 **Affected Product:** Craft CMS  
 **Affected Versions:** 3.0.0 – 3.7.32  
 **Fixed Version:** >=3.7.33  
 **CVE-Number:** CVE-2022-37783  
-**Severity:** High  
+**Severity:** High - 7.5 (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N)  
 
-*Discovered by Ing. Simon Schönegger, BSc (Office Graz), Harald Schmal, BSc (Office Vienna)*
+*Discovered by Ing. Simon Schönegger, BSc, MSc (Office Graz), Harald Schmal, BSc (Office Vienna)*
 
 During a penetration test for a customer, researchers of TÜV Trust IT Austria were able to discover that Craft CMS discloses the users’ password hashes in CSRF-Cookies and CSRF-Tokens. The initial disclosure to the vendor was performed by the customer and the vulnerability was fixed in 3.7.33. However, all older versions of Craft CMS are still affected by this vulnerability and no security advisory was published by the vendor. Therefore, TÜV Austria decided to contact the vendor again with the goal of providing a security advisory and performing responsible disclosure. As of 5th of July 2022 the vendor integrated a message in the affected versions of Craft CMS urging the users to update to at least version 3.7.33. The public disclosure of the vulnerability was scheduled for 4th of August 2022.
 
